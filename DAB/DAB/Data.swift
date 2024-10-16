@@ -16,7 +16,7 @@ class AppSearch {
   func getResults(searchTerm: String, completion: @escaping ([Result]) -> ()) {
     let searchObject: [String: Any] = ["query": searchTerm]
     let jsonSearchQuery = try? JSONSerialization.data(withJSONObject: searchObject)
-    let authenticationToken = "Bearer search-h7sft4izms6hyfkobu1dsfbo"
+    let authenticationToken = "" // security
     let appSearchURL = URL(string: "https://dab.ent.europe-west3.gcp.cloud.es.io")!
     var request = URLRequest(url: appSearchURL)
     request.httpMethod = "POST"
